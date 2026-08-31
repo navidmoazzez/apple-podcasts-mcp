@@ -11,7 +11,7 @@ Apple Podcasts for Claude, Cursor, and any other AI agent.
 
 It searches Apple's catalog, checks where a show ranks in each country, reads the listener reviews, parses any podcast's RSS feed, and searches the episodes in your own library on this Mac. If you own a show, it pulls your listening numbers too.
 
-32 tools. Most need no account, no key and no setup.
+There are 32 tools, and only the five that read your own show's analytics need an account of any kind.
 
 Built by [Navid Moazzez](https://navid.me).
 
@@ -544,8 +544,8 @@ The access token expires after 180 days with no refresh path.
 
 ## 9. Your data 🔒
 
-Nothing is uploaded anywhere. There is no backend, no telemetry and no
-phone-home.
+There is no server behind this. Your requests go straight from your machine to
+Apple and to podcast hosts, and nothing is collected or sent anywhere else.
 
 | | Where |
 |---|---|
