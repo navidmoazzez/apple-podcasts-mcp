@@ -7,9 +7,11 @@
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
 [![X](https://img.shields.io/badge/X-@thenavidm-black?logo=x)](https://x.com/thenavidm)
 
-Give any AI agent the whole of Apple Podcasts. Search the catalog, track chart positions across markets, read what listeners actually say, parse any RSS feed, search your own subscriptions including cached transcripts, and pull owner analytics for a show you run.
+Apple Podcasts for Claude, Cursor, and any other AI agent.
 
-32 tools. Most of them need no account, no key and no setup at all.
+It searches Apple's catalog, checks where a show ranks in each country, reads the listener reviews, parses any podcast's RSS feed, and searches the episodes in your own library on this Mac. If you own a show, it pulls your listening numbers too.
+
+32 tools. Most need no account, no key and no setup.
 
 Built by [Navid Moazzez](https://navid.me).
 
