@@ -1,7 +1,7 @@
 {
   "name": "@thenavidm/apple-podcasts-mcp",
   "version": "1.0.0",
-  "description": "Apple Podcasts MCP server for Claude Code and AI agents. 32 tools for podcast search, chart rank tracking, listener reviews, RSS feed parsing, your own subscription library with on-device transcript search, and Apple Podcasts Connect analytics.",
+  "description": "Apple Podcasts MCP server for Claude Code and AI agents. 32 tools for podcast search, chart rank tracking, listener reviews, RSS feed parsing and validation, on-device transcript search, and Apple Podcasts Connect analytics.",
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
@@ -40,6 +40,7 @@
   },
   "keywords": [
     "mcp",
+    "mcp-server",
     "model-context-protocol",
     "apple-podcasts",
     "podcast",
@@ -49,11 +50,15 @@
     "itunes",
     "rss",
     "transcripts",
-    "mcp-server",
     "claude",
     "claude-code",
+    "claude-desktop",
+    "cursor",
+    "windsurf",
+    "anthropic",
     "ai-agents",
-    "llm-tools"
+    "llm-tools",
+    "typescript"
   ],
   "files": [
     "dist",

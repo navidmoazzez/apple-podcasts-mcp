@@ -1,7 +1,7 @@
 # Apple Podcasts MCP
 
 [![Stars](https://img.shields.io/github/stars/thenavidm/apple-podcasts-mcp?style=flat&logo=github&label=Stars)](https://github.com/thenavidm/apple-podcasts-mcp)
-[![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE)
 [![npm](https://img.shields.io/npm/v/@thenavidm/apple-podcasts-mcp?color=orange&label=npm)](https://www.npmjs.com/package/@thenavidm/apple-podcasts-mcp)
 [![Downloads](https://img.shields.io/npm/dm/@thenavidm/apple-podcasts-mcp?color=green&label=downloads)](https://www.npmjs.com/package/@thenavidm/apple-podcasts-mcp)
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
@@ -712,7 +712,7 @@ credential, and never read a real Apple Podcasts library.
 
 ## Versions
 
-See [VERSIONS.md](VERSIONS.md).
+See [VERSIONS.md](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/VERSIONS.md).
 
 ## About the author
 
@@ -746,7 +746,7 @@ falling back to the `sqlite3` command that ships with macOS.
 
 ## License
 
-[MIT](./LICENSE). Free to use, modify, and share.
+[MIT](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE). Free to use, modify, and share.
 
 Not affiliated with, endorsed by, or connected to Apple Inc.
 
