@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://cdn.navid.media/connectors/apple-podcasts-icon.png" alt="Apple Podcasts" width="88">
+</div>
+
 # Apple Podcasts MCP
 
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE)
@@ -721,11 +725,6 @@ Navid Moazzez is a leading AI business strategist and the host of the AI Creator
 
 - Personal website: [navid.me](https://navid.me)
 - Store: [navid.bio](https://navid.bio)
-- AI OS Starter Kit: [aios.guide](https://aios.guide)
-- AI OS Workshop: [aiosworkshop.com](https://aiosworkshop.com)
-- AI Creator OS: [aicreatoros.co](https://aicreatoros.co)
-- AI Tools Library: [aitoolslibrary.io](https://aitoolslibrary.io)
-- Video Gear Guide: [videogear.guide](https://videogear.guide)
 - Navid Media: [navid.media](https://navid.media)
 - YouTube: [@thenavidm](https://youtube.com/@thenavidm?sub_confirmation=1) and [@thenavidai](https://youtube.com/@thenavidai?sub_confirmation=1)
 - X: [@thenavidm](https://x.com/thenavidm)
