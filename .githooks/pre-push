@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Runs the same checks CI would, before anything leaves the machine.
+#
+# GitHub Actions is disabled on this account, so the workflows in
+# .github/workflows are inert. Rather than pushing unverified code and finding
+# out later, the checks run here. They are the identical set: typecheck, build,
+# tests, and the smoke test that the server actually starts and lists its tools,
+# which is the failure a user would really hit.
+#
+# Enabled with: git config core.hooksPath .githooks
+# Bypass once with: git push --no-verify
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+
+step() { printf "\n\033[1m→ %s\033[0m\n" "$1"; }
+
+step "typecheck"
+npm run typecheck
+
+step "build"
+npm run build
+
+step "tests"
+npm test
+
+step "smoke: server starts and lists every tool"
+EXPECTED=$(node -p "require('./package.json').description.match(/(\d+) tools/)[1]")
+printf '%s\n%s\n' \
+  '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"pre-push","version":"1"}}}' \
+  '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}' \
+  | node dist/index.js 2>/dev/null \
+  | EXPECTED="$EXPECTED" node -e '
+    let raw = "";
+    process.stdin.on("data", c => raw += c);
+    process.stdin.on("end", () => {
+      const listed = raw.trim().split("\n").map(l => JSON.parse(l)).find(m => m.id === 2);
+      const tools = listed?.result?.tools ?? [];
+      const expected = Number(process.env.EXPECTED);
+      if (tools.length !== expected) {
+        console.error(`expected ${expected} tools, got ${tools.length}. Update the count in package.json, the README and the CI smoke test.`);
+        process.exit(1);
+      }
+      const unannotated = tools.filter(t => t.annotations?.readOnlyHint === undefined);
+      if (unannotated.length) {
+        console.error("unannotated: " + unannotated.map(t => t.name).join(", "));
+        process.exit(1);
+      }
+      console.log(`  ${tools.length} tools, all annotated`);
+    });
+  '
+
+printf "\n\033[32m✓ all checks passed\033[0m\n\n"
