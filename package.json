@@ -18,7 +18,8 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",
-    "verify": "npm run typecheck && npm run build && npm test"
+    "verify": "npm run typecheck && npm run build && npm test",
+    "check-sync": "./deploy/check-sync.sh"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
