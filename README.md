@@ -1,9 +1,7 @@
 # Apple Podcasts MCP
 
-[![Stars](https://img.shields.io/github/stars/thenavidm/apple-podcasts-mcp?style=flat&logo=github&label=Stars)](https://github.com/thenavidm/apple-podcasts-mcp)
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE)
 [![npm](https://img.shields.io/npm/v/@thenavidm/apple-podcasts-mcp?color=orange&label=npm)](https://www.npmjs.com/package/@thenavidm/apple-podcasts-mcp)
-[![Downloads](https://img.shields.io/npm/dm/@thenavidm/apple-podcasts-mcp?color=green&label=downloads)](https://www.npmjs.com/package/@thenavidm/apple-podcasts-mcp)
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
 [![X](https://img.shields.io/badge/X-@thenavidm-black?logo=x)](https://x.com/thenavidm)
 
