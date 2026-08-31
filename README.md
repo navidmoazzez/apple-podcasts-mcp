@@ -47,7 +47,6 @@ Claude: Checked eight storefronts. It is not in Apple's top 100 in any of them,
 | 10 | [Safety](#10-safety-) | Short, because almost nothing writes |
 | 11 | [Troubleshooting](#11-troubleshooting-) | Symptom to cause |
 | 12 | [FAQ](#12-faq-) | Including what an MCP server is |
-| 13 | [Build from source](#13-build-from-source-) | Run it from a checkout |
 
 ---
 
@@ -617,75 +616,75 @@ guarantee: for an agent working unattended over other people's text,
 
 ## 12. FAQ ❓
 
-**What is an MCP server?**
-A small program that gives an AI assistant a set of tools. MCP is the open
-protocol Claude, Cursor, Windsurf, VS Code and others use to talk to them. You
-install it once, and then you ask questions in plain language instead of calling
-an API.
+<details>
+<summary><b>What is an MCP server?</b></summary>
 
-**Do I need an Apple developer account?**
-No. Nothing in the first 25 tools needs an account of any kind. Only the owner
-analytics do, and only if you have a show in Apple Podcasts Connect.
+A small program that gives an AI assistant a set of tools. MCP is the open protocol Claude, Cursor, Windsurf, VS Code and others use to talk to them. You install it once, and then you ask questions in plain language instead of calling an API.
 
-**Does it work on Windows or Linux?**
-Yes, apart from the library tools. Those read the Apple Podcasts app's database,
-which only exists on macOS. The other 25 work anywhere.
+</details>
 
-**Can it post, subscribe, or rate a show?**
-No. Apple publishes no write API for podcasts, so there is nothing to call. This
-server only reads.
+<details>
+<summary><b>Do I need an Apple developer account?</b></summary>
 
-**Can it read the transcript of any episode?**
-Only the ones a show publishes in its own feed, which `find_transcripts` lists.
-Apple's own transcripts are access-controlled and unreadable outside the
-Podcasts app. For shows you follow, Apple caches a short excerpt locally and
-`search_library` searches those.
+No. Nothing in the first 25 tools needs an account of any kind. Only the owner analytics do, and only if you have a show in Apple Podcasts Connect.
 
-**Can it tell me what I have listened to?**
-Almost certainly not, and it will say so rather than guess. Listening progress
-lives on the device you listen on and does not sync to the Mac's copy of the
-library. `library_stats` tells you whether yours is an exception.
+</details>
 
-**Why does it ask for Full Disk Access?**
-It does not ask; macOS refuses without it. The Apple Podcasts library sits in a
-protected group container. The server opens it read-only and never writes to it.
-Set `APPLE_PODCASTS_LIBRARY=0` if you would rather it never looked.
+<details>
+<summary><b>Does it work on Windows or Linux?</b></summary>
 
-**Does it work with Spotify or other podcast apps?**
-No. This is Apple Podcasts. Any show's RSS feed can be read regardless of where
-it is distributed, so `get_feed` and `check_feed` are useful either way.
+Yes, apart from the library tools. Those read the Apple Podcasts app's database, which only exists on macOS. The other 25 work anywhere.
 
-**Why are my two storefronts giving different answers?**
-Because they are different. Apple runs a separate catalog, chart and review pool
-per country. That is a feature of the data, not a bug, and it is often the most
-useful thing in it.
+</details>
 
-**Is my data sent anywhere?**
-No. There is no backend. Requests go to Apple and to podcast RSS hosts, and
-nothing else.
+<details>
+<summary><b>Can it post, subscribe, or rate a show?</b></summary>
 
----
+No. Apple publishes no write API for podcasts, so there is nothing to call. This server only reads.
 
-## 13. Build from source 🔨
+</details>
 
-```bash
-git clone https://github.com/thenavidm/apple-podcasts-mcp.git
-cd apple-podcasts-mcp
-npm install
-npm run build
-npm test
-```
+<details>
+<summary><b>Can it read the transcript of any episode?</b></summary>
 
-Then point your client at `node /absolute/path/to/apple-podcasts-mcp/dist/index.js`.
+Only the ones a show publishes in its own feed, which `find_transcripts` lists. Apple's own transcripts are access-controlled and unreadable outside the Podcasts app. For shows you follow, Apple caches a short excerpt locally and `search_library` searches those.
 
-```bash
-npm run typecheck   # tsc --noEmit
-npm run dev         # tsc --watch
-npm test            # vitest, 77 tests
-```
+</details>
 
-Tests run against a faked transport. They never touch the network, never need a
-credential, and never read a real Apple Podcasts library.
+<details>
+<summary><b>Can it tell me what I have listened to?</b></summary>
+
+Almost certainly not, and it will say so rather than guess. Listening progress lives on the device you listen on and does not sync to the Mac's copy of the library. `library_stats` tells you whether yours is an exception.
+
+</details>
+
+<details>
+<summary><b>Why does it ask for Full Disk Access?</b></summary>
+
+It does not ask; macOS refuses without it. The Apple Podcasts library sits in a protected group container. The server opens it read-only and never writes to it. Set `APPLE_PODCASTS_LIBRARY=0` if you would rather it never looked.
+
+</details>
+
+<details>
+<summary><b>Does it work with Spotify or other podcast apps?</b></summary>
+
+No. This is Apple Podcasts. Any show's RSS feed can be read regardless of where it is distributed, so `get_feed` and `check_feed` are useful either way.
+
+</details>
+
+<details>
+<summary><b>Why are my two storefronts giving different answers?</b></summary>
+
+Because they are different. Apple runs a separate catalog, chart and review pool per country. That is a feature of the data, not a bug, and it is often the most useful thing in it.
+
+</details>
+
+<details>
+<summary><b>Is my data sent anywhere?</b></summary>
+
+No. There is no backend. Requests go to Apple and to podcast RSS hosts, and nothing else.
+
+</details>
 
 ---
 
