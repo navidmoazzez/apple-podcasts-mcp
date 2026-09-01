@@ -11,7 +11,13 @@
 
 Apple Podcasts for Claude, Cursor, and any other AI agent.
 
-It searches Apple's catalog, checks where a show ranks in each country, reads the listener reviews, parses any podcast's RSS feed, and searches the episodes in your own library on this Mac. If you own a show, it pulls your listening numbers too.
+It searches Apple's catalogue and checks where a show ranks in each country.
+
+It reads listener reviews and parses any podcast's RSS feed.
+
+If you own a show, it pulls your listening numbers too.
+
+Nothing here needs an account, except the owner analytics.
 
 There are 32 tools, and only the five that read your own show's analytics need an account of any kind.
 
