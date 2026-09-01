@@ -88,7 +88,7 @@ export function defaultLibraryPath(): string {
  * Storefronts are ISO 3166-1 alpha-2, lowercased.
  *
  * Apple accepts either case on the search API and only lowercase on the charts
- * host, so everything is normalised down rather than passed through.
+ * host, so everything is normalized down rather than passed through.
  */
 export function normalizeStorefront(raw: string): string {
   const t = raw.trim().toLowerCase();

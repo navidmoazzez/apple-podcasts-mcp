@@ -85,7 +85,7 @@ export function buildServer(
 /**
  * Resources: the context a model needs about Apple Podcasts itself.
  *
- * Trimmed to what actually changes behaviour. A model that knows there are no
+ * Trimmed to what actually changes behavior. A model that knows there are no
  * genre charts stops trying to ask for one, and a model that knows play data is
  * usually absent on a Mac stops reporting zeros as findings.
  */
@@ -220,7 +220,7 @@ Notes:
   \`id\`, which is a different number and only means anything on this Mac.
 - Every listing carries its \`storefront\`, because the storefront changes the
   result rather than just the language.
-- Dates are ISO-8601 UTC, normalised from three different upstream formats, so
+- Dates are ISO-8601 UTC, normalized from three different upstream formats, so
   two timestamps can be compared.
 - \`<engagement>\`-style figures never appear on public listings, because Apple
   publishes no play counts outside Podcasts Connect.

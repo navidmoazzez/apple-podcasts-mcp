@@ -1,5 +1,5 @@
 /**
- * The behaviour a reader is trusting, exercised against a faked transport.
+ * The behavior a reader is trusting, exercised against a faked transport.
  *
  * Never the network, never a real credential, never the user's own library. A
  * test that needs any of those is a test nobody runs, and a test that reads the

@@ -48,7 +48,7 @@ export type FeedEpisode = {
   guid?: string;
   link?: string;
   publishedAt?: string;
-  /** Seconds, normalised from either a number or HH:MM:SS. */
+  /** Seconds, normalized from either a number or HH:MM:SS. */
   durationSeconds?: number;
   /** Show notes. HTML is preserved: it carries the links and the timestamps. */
   description?: string;
