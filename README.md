@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://cdn.navid.media/connectors/apple-podcasts-icon.png" alt="Apple Podcasts" width="88">
-</div>
+<img src="https://cdn.navid.media/connectors/apple-podcasts-icon.png" alt="Apple Podcasts" width="88">
 
 # Apple Podcasts MCP
 
