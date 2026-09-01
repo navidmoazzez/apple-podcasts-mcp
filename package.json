@@ -35,10 +35,10 @@
   "homepage": "https://navid.me",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thenavidm/apple-podcasts-mcp.git"
+    "url": "git+https://github.com/navidmoazzez/apple-podcasts-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/thenavidm/apple-podcasts-mcp/issues"
+    "url": "https://github.com/navidmoazzez/apple-podcasts-mcp/issues"
   },
   "keywords": [
     "mcp",

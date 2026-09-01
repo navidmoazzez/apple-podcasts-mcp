@@ -36,7 +36,7 @@ git push origin main --follow-tags
 
 printf "\n\033[32m✓ %s is live\033[0m\n" "$NEW"
 echo "  npm:    https://www.npmjs.com/package/@thenavidm/apple-podcasts-mcp"
-echo "  github: https://github.com/thenavidm/apple-podcasts-mcp"
+echo "  github: https://github.com/navidmoazzez/apple-podcasts-mcp"
 echo
 echo "Anyone running npx picks it up automatically on their next start,"
 echo "because the install line pins @latest rather than a version."

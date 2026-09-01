@@ -4,7 +4,7 @@
 
 # Apple Podcasts MCP
 
-[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/LICENSE)
 [![npm](https://img.shields.io/npm/v/@thenavidm/apple-podcasts-mcp?color=orange&label=npm)](https://www.npmjs.com/package/@thenavidm/apple-podcasts-mcp)
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
 [![X](https://img.shields.io/badge/X-@thenavidm-black?logo=x)](https://x.com/thenavidm)
@@ -715,7 +715,7 @@ No. There is no backend. Requests go to Apple and to podcast RSS hosts, and noth
 
 ## Versions
 
-See [VERSIONS.md](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/VERSIONS.md).
+See [VERSIONS.md](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/VERSIONS.md).
 
 ## About the author
 
@@ -743,7 +743,7 @@ falling back to the `sqlite3` command that ships with macOS.
 
 ## License
 
-[MIT](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE). Free to use, modify, and share.
+[MIT](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/LICENSE). Free to use, modify, and share.
 
 Not affiliated with, endorsed by, or connected to Apple Inc.
 

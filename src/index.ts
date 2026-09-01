@@ -40,7 +40,7 @@ Everything else:
   APPLE_PODCASTS_REQUEST_TIMEOUT_MS per-request deadline, default 30000
   APPLE_PODCASTS_HTTP_PORT / _HOST / _TOKEN  for --http
 
-https://github.com/thenavidm/apple-podcasts-mcp
+https://github.com/navidmoazzez/apple-podcasts-mcp
 `;
 
 async function main(): Promise<void> {
