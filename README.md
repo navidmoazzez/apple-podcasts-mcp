@@ -56,8 +56,6 @@ Claude: Checked eight storefronts. It is not in Apple's top 100 in any of them,
 | 11 | [Troubleshooting](#11-troubleshooting-) | Symptom to cause |
 | 12 | [FAQ](#12-faq-) | Including what an MCP server is |
 
----
-
 ## 1. What you can ask it 💬
 
 - Where does this show rank in the US, UK and Sweden, and where is it strongest?
@@ -77,8 +75,6 @@ library that is tens of thousands of excerpts of real spoken words sitting on
 your Mac, searchable, and it answers "where did I hear that" in a way no
 catalog can.
 
----
-
 ## 2. Quick install ⚡
 
 Node 20 or newer. Nothing else.
@@ -94,8 +90,6 @@ update later.
 its charts, its reviews and every podcast RSS feed are all open. Your own
 library is read straight off this Mac. Section 3 is only for the parts that
 need something extra, and you can skip it entirely.
-
----
 
 ## 3. Setup 🔑
 
@@ -159,8 +153,6 @@ Set up @thenavidm/apple-podcasts-mcp for me.
 4. Do not ask me for Apple Podcasts Connect credentials unless I say I own a
    show. Everything else works without them.
 ```
-
----
 
 ## 4. Connect your client 🔌
 
@@ -323,8 +315,6 @@ The container has no Apple Podcasts library, so it runs the public tools only.
 Any stdio MCP client takes the same three things: the command `npx`, the args,
 and optionally an `env` block. Zed, Cline and Continue all work.
 
----
-
 ## 5. Check it worked 🩺
 
 ```bash
@@ -342,8 +332,6 @@ Two things account for most failures:
 |---|---|
 | Server does not appear at all | Node is not on the PATH your client sees, or the config JSON is malformed. Run the exact command your client runs, by hand, and read the error |
 | Library checks fail on permissions | Full Disk Access, see [section 3](#3-setup-). Adding the client is not enough if it launches the server through a terminal |
-
----
 
 ## 6. Tools 🛠️
 
@@ -438,8 +426,6 @@ Three resources, so a client can load context without spending a tool call:
 Four prompts: **show-teardown**, **niche-map**, **what-did-i-hear**,
 **feed-checkup**.
 
----
-
 ## 7. The four sources 📚
 
 Apple Podcasts is not one API. It is four things wearing the same brand, and
@@ -456,8 +442,6 @@ most useful thing to understand about this server.
 
 Three of those need nothing at all. That is unusual and it is why this works the
 moment you install it.
-
----
 
 ## 8. What Apple actually does ⚠️
 
@@ -546,8 +530,6 @@ HomePod counts twice, and Apple has no way to collapse them.
 
 The access token expires after 180 days with no refresh path.
 
----
-
 ## 9. Your data 🔒
 
 There is no server behind this. Your requests go straight from your machine to
@@ -567,8 +549,6 @@ why reads work while the Podcasts app is running.
 Hosts contacted: `itunes.apple.com`, `rss.marketingtools.apple.com`,
 `reportingitc-reporter.apple.com` if you configure analytics, and whatever host
 serves a podcast RSS feed you ask for.
-
----
 
 ## 10. Safety 🛡️
 
@@ -599,8 +579,6 @@ server instructions repeat the rule. That framing helps and it is not a
 guarantee: for an agent working unattended over other people's text,
 `APPLE_PODCASTS_READ_ONLY=1` is the real defence.
 
----
-
 ## 11. Troubleshooting 🔧
 
 `doctor` first. It names the failing source and the fix.
@@ -619,8 +597,6 @@ guarantee: for an agent working unattended over other people's text,
 | Analytics say "no report available" | Reporting lags one to two days. Try a date three or four days back |
 | Analytics reject the token | Tokens expire after 180 days. Regenerate it in Podcasts Connect |
 | "will not run without confirm: true" | Working as intended. Only `export_subscriptions` does this |
-
----
 
 ## 12. FAQ ❓
 
@@ -693,8 +669,6 @@ Because they are different. Apple runs a separate catalog, chart and review pool
 Nothing is sent anywhere. There is no backend: requests go to Apple and to podcast RSS hosts and nowhere else.
 
 </details>
-
----
 
 ## Environment variables
 
