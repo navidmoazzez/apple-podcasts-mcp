@@ -623,35 +623,35 @@ guarantee: for an agent working unattended over other people's text,
 <details>
 <summary><b>What is an MCP server?</b></summary>
 
-A small program that gives an AI assistant a set of tools. MCP is the open protocol Claude, Cursor, Windsurf, VS Code and others use to talk to them. You install it once, and then you ask questions in plain language instead of calling an API.
+An MCP server is a small program that gives an AI assistant a set of tools. MCP is the open protocol Claude, Cursor, Windsurf, VS Code and others use to talk to them. You install it once, and then you ask questions in plain language instead of calling an API.
 
 </details>
 
 <details>
 <summary><b>Do I need an Apple developer account?</b></summary>
 
-No. Nothing in the first 25 tools needs an account of any kind. Only the owner analytics do, and only if you have a show in Apple Podcasts Connect.
+You do not need one. Nothing in the first 25 tools needs an account of any kind. Only the owner analytics do, and only if you have a show in Apple Podcasts Connect.
 
 </details>
 
 <details>
 <summary><b>Does it work on Windows or Linux?</b></summary>
 
-Yes, apart from the library tools. Those read the Apple Podcasts app's database, which only exists on macOS. The other 25 work anywhere.
+It works everywhere apart from the library tools. Those read the Apple Podcasts app's database, which only exists on macOS. The other 25 work anywhere.
 
 </details>
 
 <details>
 <summary><b>Can it post, subscribe, or rate a show?</b></summary>
 
-No. Apple publishes no write API for podcasts, so there is nothing to call. This server only reads.
+It cannot. Apple publishes no write API for podcasts, so there is nothing to call. This server only reads.
 
 </details>
 
 <details>
 <summary><b>Can it read the transcript of any episode?</b></summary>
 
-Only the ones a show publishes in its own feed, which `find_transcripts` lists. Apple's own transcripts are access-controlled and unreadable outside the Podcasts app. For shows you follow, Apple caches a short excerpt locally and `search_library` searches those.
+It reads only the transcripts a show publishes in its own feed, which `find_transcripts` lists. Apple's own transcripts are access-controlled and unreadable outside the Podcasts app. For shows you follow, Apple caches a short excerpt locally and `search_library` searches those.
 
 </details>
 
@@ -672,7 +672,7 @@ It does not ask; macOS refuses without it. The Apple Podcasts library sits in a 
 <details>
 <summary><b>Does it work with Spotify or other podcast apps?</b></summary>
 
-No. This is Apple Podcasts. Any show's RSS feed can be read regardless of where it is distributed, so `get_feed` and `check_feed` are useful either way.
+It covers Apple Podcasts only. Any show's RSS feed can be read regardless of where it is distributed, so `get_feed` and `check_feed` are useful either way.
 
 </details>
 
@@ -686,7 +686,7 @@ Because they are different. Apple runs a separate catalog, chart and review pool
 <details>
 <summary><b>Is my data sent anywhere?</b></summary>
 
-No. There is no backend. Requests go to Apple and to podcast RSS hosts, and nothing else.
+Nothing is sent anywhere. There is no backend: requests go to Apple and to podcast RSS hosts and nowhere else.
 
 </details>
 
@@ -716,6 +716,10 @@ No. There is no backend. Requests go to Apple and to podcast RSS hosts, and noth
 ## Versions
 
 See [VERSIONS.md](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/VERSIONS.md).
+
+## Questions
+
+Run into a problem or have a question? [Open an issue](https://github.com/navidmoazzez/apple-podcasts-mcp/issues) and I will help.
 
 ## About the author
 
