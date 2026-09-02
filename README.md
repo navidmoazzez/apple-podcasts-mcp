@@ -694,7 +694,7 @@ Nothing is sent anywhere. There is no backend: requests go to Apple and to podca
 
 ## Versions
 
-See [VERSIONS.md](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/VERSIONS.md).
+See [CHANGELOG.md](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/CHANGELOG.md).
 
 ## Questions
 

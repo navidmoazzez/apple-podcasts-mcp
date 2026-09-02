@@ -1,4 +1,4 @@
-# Apple Podcasts MCP Versions
+# Apple Podcasts MCP changelog
 
 | Component | Version | Last Updated |
 |-----------|---------|--------------|
