@@ -44,6 +44,15 @@ The HTTP transport has no authentication of its own and belongs behind TLS and
 an authenticating proxy. Filter out the local library tools when hosting, or one
 machine's subscriptions are served to every caller.
 
+## Good-faith research
+
+Look at whatever you like in this repository. When testing, please do not access,
+change or delete data that is not yours, and do not disrupt a service other
+people depend on. If a test could affect anyone else, stop and send a private
+report first.
+
+Research done in that spirit is welcome, and nothing here is a trap.
+
 ## Supported versions
 
 The latest published version gets fixes.
