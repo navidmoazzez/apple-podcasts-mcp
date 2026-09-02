@@ -49,13 +49,14 @@ Claude: Checked eight storefronts. It is not in Apple's top 100 in any of them,
 | 3 | [Setup](#3-setup-) | Only if you want the optional parts |
 | 4 | [Connect your client](#4-connect-your-client-) | Every client, copy and paste |
 | 5 | [Check it worked](#5-check-it-worked-) | `doctor`, and what actually fails |
-| 6 | [Tools](#6-tools-) | All 32, grouped by what they reach |
-| 7 | [The four sources](#7-the-four-sources-) | Why this is not one API |
-| 8 | [What Apple actually does](#8-what-apple-actually-does-) | The traps, learned the hard way |
-| 9 | [Your data](#9-your-data-) | What is read, and what never leaves |
-| 10 | [Safety](#10-safety-) | Short, because almost nothing writes |
-| 11 | [Troubleshooting](#11-troubleshooting-) | Symptom to cause |
-| 12 | [FAQ](#12-faq-) | Including what an MCP server is |
+| 6 | [What it costs to have connected](#6-what-it-costs-to-have-connected) | Tokens per turn, and how to spend less |
+| 7 | [Tools](#7-tools-) | All 32, grouped by what they reach |
+| 8 | [The four sources](#8-the-four-sources-) | Why this is not one API |
+| 9 | [What Apple actually does](#9-what-apple-actually-does-) | The traps, learned the hard way |
+| 10 | [Your data](#10-your-data-) | What is read, and what never leaves |
+| 11 | [Safety](#11-safety-) | Short, because almost nothing writes |
+| 12 | [Troubleshooting](#12-troubleshooting-) | Symptom to cause |
+| 13 | [FAQ](#13-faq-) | Including what an MCP server is |
 
 ## 1. What you can ask it 💬
 
@@ -336,7 +337,29 @@ Two things account for most failures:
 | Server does not appear at all | Node is not on the PATH your client sees, or the config JSON is malformed. Run the exact command your client runs, by hand, and read the error |
 | Library checks fail on permissions | Full Disk Access, see [section 3](#3-setup-). Adding the client is not enough if it launches the server through a terminal |
 
-## 6. Tools 🛠️
+## 6. What it costs to have connected
+
+Every MCP server sends its whole tool list to the model on **every turn**,
+whether you mention it or not. Measured on this one:
+
+| | Sent per turn |
+|---|---|
+| 32 tool definitions, plus the server instructions | **~10,500 tokens** |
+
+That is the price of it being connected at all, before you ask anything. It is
+not unusual, and almost nobody publishes it.
+
+Two ways to spend less.
+
+**Turn it off when you are not using it.** In Claude Code that is
+`@apple-podcasts` to toggle, and every client has an equivalent.
+
+**Or reach for a shell instead.** A command is not in the context window, so it
+costs nothing on the turns you do not use it. It is not free either: an agent
+still needs the skill file, roughly 1,400 tokens, but only once the subject
+comes up rather than on every turn regardless.
+
+## 7. Tools 🛠️
 
 32 tools. Everything that reads Apple's catalog takes an optional `storefront`.
 Anywhere a show is named, it takes an Apple id **or** a pasted Apple Podcasts
@@ -429,7 +452,7 @@ Three resources, so a client can load context without spending a tool call:
 Four prompts: **show-teardown**, **niche-map**, **what-did-i-hear**,
 **feed-checkup**.
 
-## 7. The four sources 📚
+## 8. The four sources 📚
 
 Apple Podcasts is not one API. It is four things wearing the same brand, and
 they differ in who can reach them and what they are good for. This is the single
@@ -446,7 +469,7 @@ most useful thing to understand about this server.
 Three of those need nothing at all. That is unusual and it is why this works the
 moment you install it.
 
-## 8. What Apple actually does ⚠️
+## 9. What Apple actually does ⚠️
 
 The section that makes this worth more than the API docs it wraps. Everything
 here was verified against the live services, not recalled.
@@ -533,7 +556,7 @@ HomePod counts twice, and Apple has no way to collapse them.
 
 The access token expires after 180 days with no refresh path.
 
-## 9. Your data 🔒
+## 10. Your data 🔒
 
 There is no server behind this. Your requests go straight from your machine to
 Apple and to podcast hosts, and nothing is collected or sent anywhere else.
@@ -553,7 +576,7 @@ Hosts contacted: `itunes.apple.com`, `rss.marketingtools.apple.com`,
 `reportingitc-reporter.apple.com` if you configure analytics, and whatever host
 serves a podcast RSS feed you ask for.
 
-## 10. Safety 🛡️
+## 11. Safety 🛡️
 
 Short, because there is almost nothing to guard. **There is no Apple Podcasts
 write API and this server does not invent one.** Of 32 tools, 31 only read.
@@ -582,7 +605,7 @@ server instructions repeat the rule. That framing helps and it is not a
 guarantee: for an agent working unattended over other people's text,
 `APPLE_PODCASTS_READ_ONLY=1` is the real defence.
 
-## 11. Troubleshooting 🔧
+## 12. Troubleshooting 🔧
 
 `doctor` first. It names the failing source and the fix.
 
@@ -601,7 +624,7 @@ guarantee: for an agent working unattended over other people's text,
 | Analytics reject the token | Tokens expire after 180 days. Regenerate it in Podcasts Connect |
 | "will not run without confirm: true" | Working as intended. Only `export_subscriptions` does this |
 
-## 12. FAQ ❓
+## 13. FAQ ❓
 
 <details>
 <summary><b>What is an MCP server?</b></summary>
