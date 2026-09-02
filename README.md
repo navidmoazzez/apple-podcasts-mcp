@@ -22,23 +22,7 @@ There are 32 tools, and only the five that read your own show's analytics need a
 
 Built by [Navid Moazzez](https://navid.me?utm_source=github&utm_medium=readme&utm_campaign=apple-podcasts-mcp).
 
-```
-You: is My First Million actually winning, or does it just feel like it?
-
-Claude: Checked eight storefronts. It is not in Apple's top 100 in any of them,
-        which is worth holding next to the rest of the picture.
-
-  896 episodes, publishing every 2.9 days, so about 10 a month. That is a
-  daily-news cadence on an interview show, and it has held for years.
-
-  70 recent reviews across us, gb and se average 4.13, but the shape is
-  odd: 50 five-star and 12 one-star, almost nothing in between. The
-  one-stars are not about the content, they are all about ad load.
-
-  So: large, relentless, and polarising on ads rather than on substance.
-  The chart absence says the top 100 is dominated by daily news and true
-  crime, not that the show is fading.
-```
+<img src="https://cdn.navid.media/repos/apple-podcasts-mcp.gif?v=1" alt="Claude Code using the Apple Podcasts MCP server" width="520">
 
 ## Contents
 
