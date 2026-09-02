@@ -22,7 +22,7 @@ There are 32 tools, and only the five that read your own show's analytics need a
 
 Built by [Navid Moazzez](https://navid.me?utm_source=github&utm_medium=readme&utm_campaign=apple-podcasts-mcp).
 
-<img src="https://cdn.navid.media/repos/apple-podcasts-mcp.gif?v=1" alt="Claude Code using the Apple Podcasts MCP server" width="520">
+<img src="https://cdn.navid.media/repos/apple-podcasts-mcp.gif?v=2" alt="Claude Code using the Apple Podcasts MCP server" width="520">
 
 ## Contents
 
