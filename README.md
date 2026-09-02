@@ -157,6 +157,8 @@ Set up @thenavidm/apple-podcasts-mcp for me.
 
 ## 4. Connect your client 🔌
 
+The long version, every step with what to do when one fails, is in [references/setup.md](references/setup.md).
+
 Every block is self-contained. No credentials are needed in any of them; the
 `env` block is only for the optional extras from section 3.
 
