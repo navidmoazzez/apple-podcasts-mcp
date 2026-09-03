@@ -15,8 +15,12 @@ import { WriteGuard } from "./safety.js";
 import { ALL_TOOLS } from "./tools/index.js";
 import { makeContext, register, type ToolContext } from "./tools/kit.js";
 import type { FetchLike } from "./api/http.js";
+import { createRequire } from "node:module";
 
-export const VERSION = "1.0.0";
+// Read from package.json, never typed here: a hardcoded copy drifts the moment
+// the version is bumped, and then --version lies about what is running.
+const require = createRequire(import.meta.url);
+export const VERSION: string = (require("../package.json") as { version: string }).version;
 
 export const INSTRUCTIONS = `Tools for Apple Podcasts: catalog search, chart rank tracking, listener reviews, RSS feeds, your own library on this Mac, and Apple Podcasts Connect analytics.
 
