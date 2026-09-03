@@ -15,7 +15,7 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z, type ZodRawShape } from "zod";
 import { AppleError } from "../api/errors.js";
-import type { Config } from "../config.js";
+import { normalizeStorefront, type Config } from "../config.js";
 import { annotationsFor, type Risk, type Surface, type WriteGuard } from "../safety.js";
 import type { Clients } from "../clients.js";
 
@@ -163,6 +163,22 @@ export function register(
       }
     }) as never,
   );
+}
+
+/**
+ * Build the context every tool runs against.
+ *
+ * One function so the two surfaces cannot build a different context. `server.ts`
+ * calls it once at assembly, `cli.ts` calls it per command, and neither knows
+ * how the storefront default is resolved.
+ */
+export function makeContext(clients: Clients, config: Config, guard: WriteGuard): ToolContext {
+  return {
+    clients,
+    config,
+    guard,
+    storefront: (hint?: string) => (hint ? normalizeStorefront(hint) : config.storefront),
+  };
 }
 
 /** Clamp a caller-supplied limit into a range the upstream will accept. */

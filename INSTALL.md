@@ -1,4 +1,4 @@
-# Apple Podcasts MCP setup
+# Install
 
 Most of this server needs no setup at all. Apple's catalog, its charts, its
 reviews and every podcast RSS feed are open, so `npx -y

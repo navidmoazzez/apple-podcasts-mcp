@@ -2,7 +2,7 @@
 
 # Apple Podcasts MCP
 
-[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE)
 [![npm](https://img.shields.io/npm/v/@thenavidm/apple-podcasts-mcp?color=orange&label=npm)](https://www.npmjs.com/package/@thenavidm/apple-podcasts-mcp)
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
 [![X](https://img.shields.io/badge/X-@thenavidm-black?logo=x)](https://x.com/thenavidm)
@@ -142,7 +142,7 @@ Set up @thenavidm/apple-podcasts-mcp for me.
 
 ## 4. Connect your client 🔌
 
-The long version, every step with what to do when one fails, is in [references/setup.md](references/setup.md).
+The long version, every step with what to do when one fails, is in [INSTALL.md](INSTALL.md).
 
 Every block is self-contained. No credentials are needed in any of them; the
 `env` block is only for the optional extras from section 3.
@@ -697,17 +697,21 @@ Nothing is sent anywhere. There is no backend: requests go to Apple and to podca
 | `APPLE_PODCASTS_REQUEST_TIMEOUT_MS` | `30000` | Per-request deadline |
 | `APPLE_PODCASTS_MIN_REQUEST_INTERVAL_MS` | `220` | Spacing between requests, to stay under the limit |
 | `APPLE_PODCASTS_MAX_RETRIES` | `3` | Retries on 5xx and transient errors |
+| `APPLE_PODCASTS_USER_AGENT` | `apple-podcasts-mcp` | User-Agent sent to Apple and to podcast hosts |
+| `APPLE_PODCASTS_ITUNES_HOST` | `https://itunes.apple.com` | Override the Search API host, for testing |
+| `APPLE_PODCASTS_CHARTS_HOST` | `https://rss.marketingtools.apple.com` | Override the charts host, for testing |
+| `APPLE_PODCASTS_REPORTER_HOST` | `https://reportingitc-reporter.apple.com` | Override the Reporter host, for testing |
 | `APPLE_PODCASTS_HTTP_PORT` | `8788` | For `--http` |
 | `APPLE_PODCASTS_HTTP_HOST` | `127.0.0.1` | For `--http` |
 | `APPLE_PODCASTS_HTTP_TOKEN` | none | Bearer token required by `--http` |
 
 ## Versions
 
-See [CHANGELOG.md](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/CHANGELOG.md).
+See [CHANGELOG.md](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/CHANGELOG.md).
 
 ## Questions
 
-Run into a problem or have a question? [Open an issue](https://github.com/navidmoazzez/apple-podcasts-mcp/issues) and I will help.
+Run into a problem or have a question? [Open an issue](https://github.com/thenavidm/apple-podcasts-mcp/issues) and I will help.
 
 ## About the author
 
@@ -737,7 +741,7 @@ falling back to the `sqlite3` command that ships with macOS.
 
 ## License
 
-[MIT](https://github.com/navidmoazzez/apple-podcasts-mcp/blob/main/LICENSE). Free to use, modify, and share.
+[MIT](https://github.com/thenavidm/apple-podcasts-mcp/blob/main/LICENSE). Free to use, modify, and share.
 
 Not affiliated with, endorsed by, or connected to Apple Inc.
 

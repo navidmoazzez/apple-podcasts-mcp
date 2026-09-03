@@ -5,7 +5,8 @@
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
-    "apple-podcasts-mcp": "dist/index.js"
+    "apple-podcasts-mcp": "dist/index.js",
+    "apple-podcasts-cli": "dist/index.js"
   },
   "engines": {
     "node": ">=20"
@@ -23,7 +24,8 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
-    "zod": "^3.25.76"
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -35,10 +37,10 @@
   "homepage": "https://navid.me",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/navidmoazzez/apple-podcasts-mcp.git"
+    "url": "git+https://github.com/thenavidm/apple-podcasts-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/navidmoazzez/apple-podcasts-mcp/issues"
+    "url": "https://github.com/thenavidm/apple-podcasts-mcp/issues"
   },
   "keywords": [
     "mcp",

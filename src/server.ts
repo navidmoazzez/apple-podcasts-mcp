@@ -10,10 +10,10 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { existsSync } from "node:fs";
 import { makeClients, type Clients } from "./clients.js";
-import { hasReporterCredentials, loadConfig, normalizeStorefront, type Config } from "./config.js";
+import { hasReporterCredentials, loadConfig, type Config } from "./config.js";
 import { WriteGuard } from "./safety.js";
 import { ALL_TOOLS } from "./tools/index.js";
-import { register, type ToolContext } from "./tools/kit.js";
+import { makeContext, register, type ToolContext } from "./tools/kit.js";
 import type { FetchLike } from "./api/http.js";
 
 export const VERSION = "1.0.0";
@@ -50,12 +50,7 @@ export function buildServer(
   const clients = makeClients(config, fetchImpl);
   const guard = new WriteGuard(config);
 
-  const ctx: ToolContext = {
-    clients,
-    config,
-    guard,
-    storefront: (hint?: string) => (hint ? normalizeStorefront(hint) : config.storefront),
-  };
+  const ctx: ToolContext = makeContext(clients, config, guard);
 
   const server = new McpServer(
     { name: "apple-podcasts", version: VERSION },

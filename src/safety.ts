@@ -53,11 +53,28 @@ export type Surface =
   /** Apple Podcasts Connect, via the Reporter protocol. */
   | "reporter";
 
+/**
+ * Which surface a guard is protecting, so a refusal names the right syntax.
+ *
+ * Named `GuardSurface` rather than `Surface`, which this file already uses for
+ * something else entirely: which of Apple's four sources a tool reaches. Two
+ * unrelated ideas, and collapsing them into one name would make `surface:
+ * "library"` and `surface: "cli"` look like members of the same set.
+ */
+export type GuardSurface = "mcp" | "cli";
+
 export class WriteGuard {
   private readonly config: Config;
+  private readonly surface: GuardSurface;
 
-  constructor(config: Config) {
+  constructor(config: Config, surface: GuardSurface = "mcp") {
     this.config = config;
+    this.surface = surface;
+  }
+
+  /** `--confirm` in a terminal, `confirm: true` in a tool call. */
+  private get confirmFlag(): string {
+    return this.surface === "cli" ? "--confirm" : "confirm: true";
   }
 
   get readOnly(): boolean {
@@ -84,7 +101,7 @@ export class WriteGuard {
       if (confirm !== true) {
         this.audit(tool, summary, "blocked: no confirm");
         throw new WriteBlockedError(
-          `${tool} writes a file and would overwrite whatever is already at that path, so it will not run without confirm: true. About to: ${summary}. Call again with confirm: true if that is what was asked for.`,
+          `${tool} writes a file and would overwrite whatever is already at that path, so it will not run without ${this.confirmFlag}. About to: ${summary}. Call again with ${this.confirmFlag} if that is what was asked for.`,
         );
       }
     }

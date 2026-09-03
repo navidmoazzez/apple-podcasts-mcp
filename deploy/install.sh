@@ -6,7 +6,7 @@
 # pointed at an absolute path.
 set -euo pipefail
 
-REPO="${APPLE_PODCASTS_MCP_REPO:-https://github.com/navidmoazzez/apple-podcasts-mcp.git}"
+REPO="${APPLE_PODCASTS_MCP_REPO:-https://github.com/thenavidm/apple-podcasts-mcp.git}"
 DIR="${APPLE_PODCASTS_MCP_DIR:-$HOME/.local/share/apple-podcasts-mcp}"
 
 need() {
